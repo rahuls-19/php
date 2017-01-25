@@ -1,10 +1,15 @@
 <?php
-if(isset($_POST['user_input']) && !empty($_POST['user_input']))
-  echo $user_input = $_POST['user_input'];
+$find = array("akash","ashmit","abhishek");
+$replace = array("alex","starc","virat");
+if(isset($_POST['user_input']) && !empty($_POST['user_input'])){
+  //echo $user_input = $_POST['user_input'];
+ $user_input = $_POST['user_input'];
+ $user_input_new = str_replace($find,$replace,$user_input);
+ echo $user_input_new;
 
 
 
-
+}
  ?>
  <hr>
  <form action = "word_censoring.php" method = "POST" >
